@@ -1,6 +1,6 @@
 .container{
   height: 100vh;
-  max-width: 990px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
 
@@ -9,11 +9,9 @@
 }
 
 .container section {
-  flex: 1; /* ocupar a largura maxima do container */
-  
+  flex: 1; /* ocupar a largura maxima do container */  
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6.25rem;
   align-content: center;
-
 }
