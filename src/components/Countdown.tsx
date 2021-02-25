@@ -1,52 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
-
-import {ChallengesContext} from '../contexts/ChallengeContext';
+import React, { useContext } from 'react';
+import { CountdownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/Countdown.module.css';
 
-let countdownTimeOut;
-
 export default function Countdown () {
-
-
-
-  const {startNewChallenge} = useContext(ChallengesContext); //só usa essa funcao se o timer chegar em zero
-
-
-  const [time, setTime] = useState(0.1 * 60); //tempo em segundos
-  const [isActive, setIsActive] = useState(false);//armazena se o botao foi clicado ou se o contador esta parado
-  const [hasFinished, setHasFinished] = useState(false);
-
-  let minutes = Math.floor(time / 60);
-  let seconds = time % 60;
+  const {minutes, seconds, hasFinished, countDown, isActive, resetCountdown} = useContext(CountdownContext)
 
   let [minutesLeft, minutesRight] = String(minutes).padStart(2, '0').split('');
   let [secondsLeft, secondsRight] = String(seconds).padStart(2, '0').split('');
-  
-  function countDown () {
-    setIsActive(true);
-  }
 
-  function resetCountdown() {
-    clearTimeout(countdownTimeOut);
-    setIsActive(false);
-    setTime(25*60);
-  }
-
-  /* useEffect - quando algo acontecer o efeito colateral vem XD */
-  /* Toda vez que o valor passado em [] mudar, a funcao dentro do useEffect é disparada */
-  useEffect(()=>{
-    if(isActive && time>0){
-      countdownTimeOut = setTimeout(()=> {
-        setTime(time -1);
-      }, 1000);
-    }else if(isActive && time===0){ 
-      setHasFinished(true);
-      setIsActive(false);
-      startNewChallenge();
-    }
-  }, [isActive, time]);
-
- 
   return (
     <div>
       <div className={styles.countdownContainer}>
