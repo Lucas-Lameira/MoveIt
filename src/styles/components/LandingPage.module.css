@@ -1,0 +1,73 @@
+.containerLanding {
+  height: 100vh;
+  /* background-color:  ; */
+  background: url('/icons/simbolo.png') var(--blue) no-repeat ;
+  /* display: flex;
+  align-items:flex-end;
+  justify-content: flex-end;
+  padding: 0 8rem 8rem 0; */
+  font:1.5rem 'Inter', sans-serif;
+}
+
+.containerLanding main {
+  position: absolute;
+  top:0rem;
+  right: 0rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.containerLanding main header{
+  margin: 5rem 0;
+}
+
+.containerLanding main strong{
+  color: var(--white);   
+  font-size: 2rem; 
+}
+
+.containerLanding main p{
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  width: 75%;  
+  color: var(--text-highlight);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.containerLanding main p img{
+  margin-right:1rem ;
+}
+
+.containerLanding main .loginInput{
+  display: flex;
+  align-items: center;
+}
+
+.containerLanding main .loginInput > input{
+  height: 60px;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  color: var(--white);
+  background: linear-gradient(to right ,var(--blue-dark), var(--blue));
+}
+
+.containerLanding main .loginInput > input::placeholder{
+  color: var(--text-highlight);
+}
+
+.containerLanding main .loginInput button{
+  height: 60px;
+  width: 4rem;
+  background: var(--blue-dark);
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.3s;
+}
+
+.containerLanding main .loginInput button:hover{
+  background: var(--green);
+}

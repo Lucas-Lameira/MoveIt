@@ -19,11 +19,12 @@
   background: var(--white);
   width: 100%;
   max-width: 400px;
-  padding: 2rem 2rem;
+  padding: 2rem 0 0 0;
   border-radius: 8px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   text-align: center;
   position: relative;
+  font-family: 'Inter';
 }
 
 
@@ -33,6 +34,7 @@
   color: var(--blue);
   background: url('/icons/levelup.svg') no-repeat center;
   background-size:contain;
+  text-shadow:0 0 60px #5964e078; 
 }
 
 .modalContainer strong {
@@ -56,4 +58,30 @@
 
   /* bottao outline pega o tamanho como base o font size */
   font-size: 0;
+}
+
+.modalContainer footer{
+  background:#F5FCFF;
+  height: 100px;  
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.13);
+
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .modalContainer footer:hover{
+  background: var(--blue-twitter);
+}
+ */
+
+.modalContainer footer strong{
+ font-weight: 600;
+ font-size: 1.2rem;
+ color: var(--blue-twitter);
+ margin-right: 1rem;
 }

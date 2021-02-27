@@ -18,6 +18,11 @@ export function LevelUpModal() {
         <button type="button" onClick={closeLevelUpModal}>
           <img src="icons/close.svg" alt="Fechar modal" title="close"/>
         </button>
+
+        <footer>
+          <strong>Compartillhar no Twitter </strong>
+          <img src="/icons/twitter.svg" alt="Twitter icon"/>
+        </footer>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import Countdown from '../components/Countdown';
 import ChallengeBox from '../components/ChallengeBox';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengeContext';
+import Sidebar from '../components/Sidebar';
 
 
 interface HomeProps {
@@ -26,12 +27,13 @@ export default function Home(props: HomeProps) {
       challengesCompleted={props.challengesCompleted}
 
     >
+    <Sidebar />
       <div className={styles.container}>       
+
         <Head>
           <title>Moveit</title>
         </Head>
-        <ExperienceBar />
-        
+        <ExperienceBar />              
         <CountdownProvider>
           <section>
             <div>

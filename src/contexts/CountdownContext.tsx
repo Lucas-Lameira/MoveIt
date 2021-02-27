@@ -21,7 +21,7 @@ export function CountdownProvider ({children}:CountdownProviderProps) {
 
   const {startNewChallenge} = useContext(ChallengesContext); //só usa essa funcao se o timer chegar em zero
   
-  const [time, setTime] = useState(25 * 60); //tempo em segundos
+  const [time, setTime] = useState(0.1 * 60); //tempo em segundos
   const [isActive, setIsActive] = useState(false);//armazena se o botao foi clicado ou se o contador esta parado
   const [hasFinished, setHasFinished] = useState(false);
 

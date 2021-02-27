@@ -1,9 +1,8 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { ChallengesContext} from  '../contexts/ChallengeContext';
 import { CountdownContext } from '../contexts/CountdownContext';
 
 import styles from '../styles/components/ChallengeBox.module.css';
-
 
 export default function ChallengeBox () {  
   const {activeChallenge, resetChallenge, completeChallenge} = useContext(ChallengesContext);  
@@ -59,9 +58,6 @@ export default function ChallengeBox () {
           </p>
         </div>
       )}
-   
-
-
     </div>
   )
 }
