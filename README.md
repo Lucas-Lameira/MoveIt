@@ -1,6 +1,6 @@
 <h1 align="center"> Move.It </h1>
-![moveit logo](https://github.com/Lucas-Lameira/MoveIt/blob/master/public/icons/logo.png)
 
+![show](https://github.com/Lucas-Lameira/MoveIt/blob/master/public/icons/logo.png)
 
 <h1>Descrição do projeto</h1>
 <p>
